@@ -1,0 +1,15 @@
+version: '3.6'
+
+networks:
+  my_net:
+    name: my_net
+    driver: overlay
+
+services:
+  web:
+    image: movies
+    build: .
+    networks:
+      - my_net
+    ports:
+      - "5000:5000"
