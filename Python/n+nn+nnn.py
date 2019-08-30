@@ -1,0 +1,5 @@
+in_num = int(input("enter a value: "))
+n1 = int("%s"%in_num)
+n2 = int("%s%s"%(in_num,in_num))
+n3 = int("%s%s%s"%(in_num,in_num,in_num))
+print(n1+n2+n3)
