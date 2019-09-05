@@ -1,0 +1,10 @@
+flask
+numpy
+pandas
+sqlalchemy
+pymysql
+mysqlclient
+mysql-connector-python-rf
+mysql-connector
+xlrd
+xlsxwriter

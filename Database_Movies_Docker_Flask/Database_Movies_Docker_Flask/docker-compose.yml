@@ -1,0 +1,28 @@
+version: '3.6'
+
+networks:
+  my_net:
+    name: my_net
+    driver: overlay
+
+services:
+  web:
+    image: movies
+    build: .
+    networks:
+      - my_net
+    environment:
+      - HOST_IP=${HOST_IP}
+    volumes:
+      - file_output:/movies/output
+    ports:
+      - "5000:5000"
+
+volumes:
+  file_output:
+    driver: local
+    name: file_output
+    driver_opts:
+      type: 'none'
+      o: 'bind'
+      device: ${OUTPUT_PATH}
