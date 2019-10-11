@@ -12,5 +12,6 @@ canvas.pack()
 ball = canvas.create_oval(10,10,30,30, fill="red")
 ball2 = canvas.create_oval(10,50,30,70, fill="green")
 ball2 = canvas.create_oval(10,90,30,110, fill="green")
+ball3 = canvas.create_oval(10,130,30,150, fill="black")
 
 root.mainloop()
